@@ -10,7 +10,7 @@ module.exports = function dateSample(sampleActivity) {
   if((parseFloat(sampleActivity) <= 0)){
     return false;
   }
-  else if(eval(typeof sampleActivity === "string" && parseFloat(sampleActivity) <= MODERN_ACTIVITY)){
+  else if(typeof sampleActivity === "string" && parseFloat(sampleActivity) <= MODERN_ACTIVITY){
     Years = Math.ceil(Math.log(MODERN_ACTIVITY / eval(sampleActivity)) / k);
     return Years;
   }
